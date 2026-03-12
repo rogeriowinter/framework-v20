@@ -11,6 +11,12 @@
 [images]
   remote_images = ["https://.*"]
 
+# Redirect raiz para pagina de vendas
+[[redirects]]
+  from = "/"
+  to = "/pagina-de-vendas-desafio-3-sistemas/"
+  status = 302
+
 # Redirect www → apex
 [[redirects]]
   from = "https://www.example.com/*"
