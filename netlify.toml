@@ -16,6 +16,7 @@
   from = "/"
   to = "/pagina-de-vendas-desafio-3-sistemas/"
   status = 302
+  force = true
 
 # Redirect www → apex
 [[redirects]]
