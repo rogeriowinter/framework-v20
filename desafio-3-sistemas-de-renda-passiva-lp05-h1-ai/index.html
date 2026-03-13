@@ -35,9 +35,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <!-- Fonts: DM Serif Display + DM Sans (max 3 weights) -->
+  <!-- DNS Prefetch para terceiros -->
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+  <link rel="dns-prefetch" href="//cdn.utmify.com.br">
+  <link rel="dns-prefetch" href="//cdn.provesrc.com">
+
+  <!-- Preload hero background image -->
+  <link rel="preload" href="/.netlify/images?url=/images/Foto hero Familia.png&w=1920&q=80" as="image">
+
+  <!-- Fonts: DM Serif Display + DM Sans (max 4 weights) -->
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=DM+Serif+Display&display=swap"
     rel="stylesheet">
 
   <!-- intl-tel-input CSS -->
@@ -75,7 +83,7 @@
     <div class="hero__container">
       <!-- Lado esquerdo: conteúdo principal (70%) -->
       <div class="hero__content">
-        <img src="/images/Logo desafio png.png" alt="Desafio Os 3 Sistemas da Renda Passiva" class="hero__logo">
+        <img src="/.netlify/images?url=/images/Logo desafio png.png&w=600&q=80" alt="Desafio Os 3 Sistemas da Renda Passiva" class="hero__logo" width="600" height="120" loading="eager" fetchpriority="high">
 
         <p class="hero__event-info">Ao vivo no Zoom &nbsp;|&nbsp; 23 a 27 de março &nbsp;|&nbsp; Sempre às 20h</p>
 
@@ -142,7 +150,7 @@
           <iframe data-src="https://www.youtube.com/embed/wsxq7vur5oU?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">Ele constrói liberdade financeira com segurança e clareza.</p>
         <div class="testimonial-card__footer">
@@ -165,7 +173,7 @@
           <iframe data-src="https://www.youtube.com/embed/0SMbAvx3kbg?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">Metodologia e seriedade do evento é diferente de tudo o que ele viu.</p>
         <div class="testimonial-card__footer">
@@ -188,7 +196,7 @@
           <iframe data-src="https://www.youtube.com/embed/pCjADRNK67w?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">"Adrian é a melhor pessoa para dar a real direção da liberdade financeira"</p>
         <div class="testimonial-card__footer">
@@ -211,7 +219,7 @@
           <iframe data-src="https://www.youtube.com/embed/Mnekarl2OXs?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">Implementou o plano patrimonial para se aposentar em 5 anos.</p>
         <div class="testimonial-card__footer">
@@ -234,7 +242,7 @@
           <iframe data-src="https://www.youtube.com/embed/J3wsp4-83D4?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">Hoje ela tem clareza de como proteger seu patrimônio e ter autonomia
           financeira.</p>
@@ -258,7 +266,7 @@
           <iframe data-src="https://www.youtube.com/embed/MuucmyeZkkI?autoplay=1&rel=0&modestbranding=1"
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+            allowfullscreen loading="lazy"></iframe>
         </div>
         <p class="testimonial-card__text">Ela dorme melhor depois de proteger seu patrimônio.</p>
         <div class="testimonial-card__footer">
@@ -309,7 +317,7 @@
               </p>
             </div>
             <div class="schedule-card__image-wrapper">
-              <img src="/.netlify/images?url=/images/sessão-aula-dia-1.jpg&w=600&q=80" alt="Aula 1" loading="lazy">
+              <img src="/.netlify/images?url=/images/sessão-aula-dia-1.jpg&w=600&q=80" alt="Aula 1" loading="lazy" width="600" height="1067">
             </div>
           </div>
         </article>
@@ -334,7 +342,7 @@
               </p>
             </div>
             <div class="schedule-card__image-wrapper">
-              <img src="/.netlify/images?url=/images/sessão-aula-dia-2.jpg&w=600&q=80" alt="Aula 2" loading="lazy">
+              <img src="/.netlify/images?url=/images/sessão-aula-dia-2.jpg&w=600&q=80" alt="Aula 2" loading="lazy" width="600" height="1067">
             </div>
           </div>
         </article>
@@ -363,7 +371,7 @@
               </ul>
             </div>
             <div class="schedule-card__image-wrapper">
-              <img src="/.netlify/images?url=/images/sessão-aula-dia-3.jpg&w=600&q=80" alt="Aula 3" loading="lazy">
+              <img src="/.netlify/images?url=/images/sessão-aula-dia-3.jpg&w=600&q=80" alt="Aula 3" loading="lazy" width="600" height="1067">
             </div>
           </div>
         </article>
@@ -389,7 +397,7 @@
               </p>
             </div>
             <div class="schedule-card__image-wrapper">
-              <img src="/.netlify/images?url=/images/sessão-aula-dia-4.jpg&w=600&q=80" alt="Aula 4" loading="lazy">
+              <img src="/.netlify/images?url=/images/sessão-aula-dia-4.jpg&w=600&q=80" alt="Aula 4" loading="lazy" width="600" height="1067">
             </div>
           </div>
         </article>
@@ -414,7 +422,7 @@
               </p>
             </div>
             <div class="schedule-card__image-wrapper">
-              <img src="/.netlify/images?url=/images/sessão-aula-dia-5.jpg&w=600&q=80" alt="Aula 5" loading="lazy">
+              <img src="/.netlify/images?url=/images/sessão-aula-dia-5.jpg&w=600&q=80" alt="Aula 5" loading="lazy" width="600" height="1067">
             </div>
           </div>
         </article>
@@ -459,55 +467,55 @@
         <!-- Grupo 1 -->
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 1.jpeg&w=400&q=80" alt="Depoimento de cliente 1"
-            loading="lazy">
+            loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 2.jpeg&w=400&q=80" alt="Depoimento de cliente 2"
-            loading="lazy">
+            loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 3.jpeg&w=400&q=80" alt="Depoimento de cliente 3"
-            loading="lazy">
+            loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 4.jpeg&w=400&q=80" alt="Depoimento de cliente 4"
-            loading="lazy">
+            loading="lazy" width="400" height="711">
         </div>
 
         <!-- Grupo 2 -->
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 1.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 1 duplicado" loading="lazy">
+            alt="Depoimento de cliente 1 duplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 2.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 2 duplicado" loading="lazy">
+            alt="Depoimento de cliente 2 duplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 3.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 3 duplicado" loading="lazy">
+            alt="Depoimento de cliente 3 duplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 4.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 4 duplicado" loading="lazy">
+            alt="Depoimento de cliente 4 duplicado" loading="lazy" width="400" height="711">
         </div>
 
         <!-- Grupo 3 (Triplicado para loop infinito real em qualquer tela) -->
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 1.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 1 triplicado" loading="lazy">
+            alt="Depoimento de cliente 1 triplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 2.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 2 triplicado" loading="lazy">
+            alt="Depoimento de cliente 2 triplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 3.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 3 triplicado" loading="lazy">
+            alt="Depoimento de cliente 3 triplicado" loading="lazy" width="400" height="711">
         </div>
         <div class="results-print">
           <img src="/.netlify/images?url=/images/Depoimento print 4.jpeg&w=400&q=80"
-            alt="Depoimento de cliente 4 triplicado" loading="lazy">
+            alt="Depoimento de cliente 4 triplicado" loading="lazy" width="400" height="711">
         </div>
       </div>
     </div>
@@ -635,7 +643,7 @@
         <div class="expert__frame-offset" data-aos="fade-up" data-aos-delay="200"></div>
         <div class="expert__image-wrapper" data-aos="fade-up">
           <img src="/.netlify/images?url=/images/foto Adrian.jpg&w=800&q=80" alt="Adrian Carvalho" class="expert__image"
-            loading="lazy">
+            loading="lazy" width="800" height="1000">
         </div>
         <!-- Badge Instagram -->
         <a href="https://instagram.com/eu.adriancarvalho" target="_blank" rel="noopener" class="expert__insta-badge">
@@ -885,10 +893,10 @@
 
   <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
   <!-- intl-tel-input JS -->
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js" defer></script>
   <!-- JS -->
   <script>
     // Inicializar AOS
