@@ -99,11 +99,30 @@ async function handleFormSubmit(e) {
   btn.disabled = true;
   btn.textContent = 'Enviando...';
 
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  
+  // Adiciona parametros da URL (como UTMs) ao objeto de dados
+  new URLSearchParams(window.location.search).forEach((value, key) => {
+    if (!(key in data)) {
+      data[key] = value;
+    }
+  });
+
+  const actionUrl = form.getAttribute('action');
+  
+  if (!actionUrl || actionUrl === '#' || actionUrl === '') {
+     showFeedback(feedback, 'error', 'Erro de configuração: URL do Webhook não definida no formulário.');
+     btn.disabled = false;
+     btn.textContent = originalText;
+     return;
+  }
+
   try {
-    const res = await fetch(form.getAttribute('action') || window.location.pathname, {
+    const res = await fetch(actionUrl, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data)
     });
 
     if (res.ok) {
@@ -114,28 +133,10 @@ async function handleFormSubmit(e) {
 
       // GTM dataLayer
       if (typeof dataLayer !== 'undefined') {
-        dataLayer.push({ event: 'generate_lead', form_name: form.getAttribute('name') || 'contato', method: 'netlify_form' });
+        dataLayer.push({ event: 'generate_lead', form_name: form.getAttribute('name') || 'contato', method: 'webhook_direto' });
       }
 
-      // Redirect com parametros
-      const action = form.getAttribute('action');
-      if (action) {
-        const redirectUrl = new URL(action, window.location.origin);
-
-        // Repassa todos os parametros da URL atual (utm_source, fbclid, etc)
-        new URLSearchParams(window.location.search).forEach((value, key) => {
-          redirectUrl.searchParams.set(key, value);
-        });
-
-        // Passa nome e email como parametros
-        if (nome) redirectUrl.searchParams.set('nome', nome);
-        if (email) redirectUrl.searchParams.set('email', email);
-
-        window.location.href = redirectUrl.toString();
-        return;
-      }
-
-      // Fallback: mostrar mensagem (quando nao tem action)
+      // Após sucesso, mostra mensagem e limpa form
       showFeedback(feedback, 'success', 'Mensagem enviada com sucesso!');
       form.reset();
       if (phone && phone._iti) phone._iti.setNumber('');

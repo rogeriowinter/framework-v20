@@ -14,7 +14,7 @@
 # Redirect raiz para pagina de vendas
 [[redirects]]
   from = "/"
-  to = "/pagina-de-vendas-desafio-3-sistemas/"
+  to = "/desafio-3-sistemas-de-renda-passiva-lp05-h1-ai/"
   status = 302
   force = true
 
