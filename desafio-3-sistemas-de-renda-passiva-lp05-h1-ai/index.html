@@ -1124,19 +1124,21 @@
         // Definição da URL do Webhook
         const webhookUrl = 'https://hook.us1.make.com/zj62sb6yhqtxonh1anq6g8u7jf6mtkbt';
 
-        // Coleta de dados estruturados para o Webhook em JSON
+        // Coleta de dados estruturados para o Webhook em JSON, formatado igual ao exemplo
         const webhookData = {
-          nome: nome.value.trim(),
+          name: nome.value.trim(),
           email: emailVal,
-          telefone: iti.getNumber(),
+          phone: iti.getNumber(),
           utm_source: document.getElementById('checkout-utm_source').value || '',
           utm_campaign: document.getElementById('checkout-utm_campaign').value || '',
           utm_medium: document.getElementById('checkout-utm_medium').value || '',
           utm_term: document.getElementById('checkout-utm_term').value || '',
           utm_content: document.getElementById('checkout-utm_content').value || '',
+          utm_id: document.getElementById('checkout-utm_id').value || '',
           xcod: document.getElementById('checkout-xcod').value || '',
           utm_pagina: document.getElementById('checkout-utm_pagina').value || '',
-          utm_id: document.getElementById('checkout-utm_id').value || ''
+          form_id: '685fbb4a',
+          form_name: 'd3s-popup-padrão'
         };
 
         // UTM values for URL string
@@ -1173,7 +1175,7 @@
         fetch(webhookUrl, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(webhookData)
+          body: JSON.stringify([webhookData])
         })
         .finally(() => {
           // Após o fetch resolver/falhar (fire-and-forget), mandamos para o pagto do Ticto.
