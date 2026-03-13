@@ -51,6 +51,9 @@
   <!-- intl-tel-input CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/css/intlTelInput.css">
 
+  <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
   <!-- CSS -->
   <link rel="stylesheet" href="/desafio-3-sistemas-de-renda-passiva-lp05-h1-ai/style.css">
 </head>
@@ -891,25 +894,23 @@
     </div>
   </div>
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <!-- AOS JS -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
 
   <!-- intl-tel-input JS -->
   <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@24.6.0/build/js/intlTelInput.min.js" defer></script>
   <!-- JS -->
   <script>
-    // Inicializar AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 80,
-      disableMutationObserver: true
-    });
-
     // IntersectionObserver para timeline (Seção 3)
     document.addEventListener("DOMContentLoaded", () => {
+      // Inicializar AOS
+      AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 80,
+        disableMutationObserver: true
+      });
       // Play Video Function setup
       window.playVideo = function (thumbEl) {
         const wrapper = thumbEl.parentElement;
